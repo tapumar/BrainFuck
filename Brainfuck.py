@@ -48,7 +48,7 @@ class Brainfuck:
 		if cells[pointer] > 255:
 			cells[pointer] -= 256
 		elif cells[pointer] < 0:
-			cells[pointer] = 256 - cells[pointer]
+			cells[pointer] += 256
 		if pointer < 0 or pointer > 29999:
 			raise MemoryError('Out of range')
 		pc += 1
